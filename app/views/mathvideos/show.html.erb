@@ -6,7 +6,7 @@
 <div class="card text-center">
   <div class="card-header">
     <strong>Title:</strong>
-    <%= @math_video.title %>
+    <%= @mathvideo.title %>
   </div>
   <div class="card-body">
     <h5 class="card-title"> Lectur 01</h5>
@@ -17,15 +17,15 @@
     preload="auto"
     width="640"
     height="264"
-    poster="<%= url_for(@math_video.thumbnail)%>"
+    poster="<%= url_for(@mathvideo.thumbnail)%>"
     data-setup="{}"
   >
-    <source src="<%= url_for(@math_video.clip)%>" type="video/mp4" />
+    <source src="<%= url_for(@mathvideo.clip)%>" type="video/mp4" />
 
   </video>
   <p>
     <strong>Description:</strong>
-    <%= @math_video.description %>
+    <%= @mathvideo.description %>
   </p>
 
   </div>
@@ -36,6 +36,6 @@
 
 <div>
   <%= link_to "Back to videos", mathvideos_path %>
-  <%= button_to "Destroy this video", @math_video, method: :delete %>
+  <%= button_to "Destroy this video", @mathvideo, method: :delete %>
 </div>
 <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
