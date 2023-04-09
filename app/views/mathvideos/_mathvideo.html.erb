@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <% @mathvideos.each do |mathvideo| %>
+      <div class="col-lg-4 mt-3">
+        <div id="<%= dom_id mathvideo %>">
+          <div class="card text-center">
+            <div class="card-header">
+              <strong>Title:</strong>
+              <%= mathvideo.title %>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Lectur 01</h5>
+              <%= link_to mathvideo.title, mathvideo, class: "btn btn-primary" %>
+              <p>
+                <strong>Description:</strong>
+                <%= mathvideo.description %>
+              </p>
+              <p>
+                <%= link_to "Show this video", mathvideo %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

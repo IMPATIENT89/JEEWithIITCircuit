@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<div id="<%= dom_id @mathvideo_video %>">
+<div class="card text-center">
+  <div class="card-header">
+    <strong>Title:</strong>
+    <%= @math_video.title %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> Lectur 01</h5>
+    <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="<%= url_for(@math_video.thumbnail)%>"
+    data-setup="{}"
+  >
+    <source src="<%= url_for(@math_video.clip)%>" type="video/mp4" />
+
+  </video>
+  <p>
+    <strong>Description:</strong>
+    <%= @math_video.description %>
+  </p>
+
+  </div>
+</div>
+</div>
+
+   
+
+<div>
+  <%= link_to "Back to videos", mathvideos_path %>
+  <%= button_to "Destroy this video", @math_video, method: :delete %>
+</div>
+<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
