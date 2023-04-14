@@ -1,32 +1,34 @@
 <p style="color: green"><%= notice %></p>
 <div id="<%= dom_id @chemistry %>">
-<div class="card text-center">
-  <div class="card-header">
-    <strong>Title:</strong>
-    <%= @chemistry.title %>
+  <div class="container">
+    <div class="card text-center">
+      <div class="card-header">
+        <strong>Title:</strong>
+        <%= @chemistry.title %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> Get ready with a pen and paper, and make sure you're able to focus before starting your study session</h5>
+        <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        width="640"
+        height="264"
+        poster="<%= url_for(@chemistry.thumbnail)%>"
+        data-setup="{}"
+      >
+        <source src="<%= url_for(@chemistry.clip)%>" type="video/mp4" />
+    
+      </video>
+      <p>
+        <strong>Description:</strong>
+        <%= @chemistry.description %>
+      </p>
+    
+      </div>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title"> Be ready with Pen and Copy and start studying with full focus</h5>
-    <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="<%= url_for(@chemistry.thumbnail)%>"
-    data-setup="{}"
-  >
-    <source src="<%= url_for(@chemistry.clip)%>" type="video/mp4" />
-
-  </video>
-  <p>
-    <strong>Description:</strong>
-    <%= @chemistry.description %>
-  </p>
-
-  </div>
-</div>
 </div>
 
    
