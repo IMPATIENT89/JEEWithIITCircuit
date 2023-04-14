@@ -6,7 +6,7 @@
     <%= @chemistry.title %>
   </div>
   <div class="card-body">
-    <h5 class="card-title"> Lectur 01</h5>
+    <h5 class="card-title"> Be ready with Pen and Copy and start studying with full focus</h5>
     <video
     id="my-video"
     class="video-js"
@@ -31,7 +31,8 @@
 
    
 
-<div>
-  <%= link_to "Back to videos", chemistries_path %>
+<div class="text-center mt-3">
+  <%= link_to "Back to all chemistry videos!", chemistries_path, class:"btn btn-primary mb-3" %>
+  <%= link_to "Back to Home Page", root_path, class:"btn btn-success mb-3" %>
   <%= button_to "Destroy this video", @chemistry, method: :delete %>
 </div>
